@@ -108,7 +108,7 @@ alias rm="rm -iv"
 alias dnf-up="sudo dnf update && sudo dnf upgrade"
 
 alias git-save-my-environment="
-  cd Git/my-environment; 
+  cd ~/Git/my-environment; 
   rm -rf nvim alacritty zshrc &> /dev/null;
   cp -r ~/.config/nvim ./nvim;
   cp -r ~/.config/alacritty ./alacritty;
@@ -119,3 +119,4 @@ alias git-save-my-environment="
 "
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+alias cppcheck='cppcheck --enable=all'
