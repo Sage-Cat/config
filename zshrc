@@ -106,17 +106,7 @@ export PATH=${HOME}/bin:${PATH}
 # my-aliases
 alias rm="rm -iv"
 alias dnf-up="sudo dnf update && sudo dnf upgrade"
-
-alias git-save-my-environment="
-  cd ~/Git/my-environment; 
-  rm -rf nvim alacritty zshrc &> /dev/null;
-  cp -r ~/.config/nvim ./nvim;
-  cp -r ~/.config/alacritty ./alacritty;
-  cp ~/.zshrc ./zshrc;
-  ls -la;
-  git add * && git commit -m \"$(date)\" && git push;
-  cd -;
-"
+alias cppcheck='cppcheck --enable=all'
+alias save-env='bash ~/bin/git-update-my-environment'
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-alias cppcheck='cppcheck --enable=all'
